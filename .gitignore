@@ -1,0 +1,28 @@
+# Build output
+bin/
+obj/
+dist/
+release/
+*.user
+*.suo
+
+# IDE
+.vs/
+.idea/
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Game artifacts that must never be committed
+BepInEx/
+dotnet/
+winhttp.dll
+doorstop_config.ini
+.doorstop_version
+Mods/
+*.log
+
+# Local overrides
+local.props

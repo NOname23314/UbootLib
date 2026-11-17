@@ -1,0 +1,23 @@
+﻿// Mission file for the game Wolfpack. https://store.steampowered.com/app/490920/Wolfpack/
+// UbootLib demo mission — import with: Mission Editor > Import mission from clipboard.
+
+MissionTitle(UbootLib Demo Convoy)
+MissionDescription(A small convoy is crossing your patrol area. Sink as much tonnage as you can before the escorts find you.)
+ShortDescription(Demo mission shipped by UbootLib.)
+TonnageGoal(12000)
+TimeLimit(45)
+Year(1941)
+Month(6)
+Day(12)
+Hour(22)
+Minute(30)
+Location(1)
+Weather(1)
+NumTorpsFwd(14)
+NumTorpsAft(4)
+TargetList(10,12,10)
+AntiTargetList()
+MissionEndsIfDiscovered(1)
+ShowMissionObjectives(1)
+MissionCompletedText(Convoy scattered. Good hunting.)
+MissionFailedText(The escorts found us. Mission failed.)
