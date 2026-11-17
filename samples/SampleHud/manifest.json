@@ -1,0 +1,12 @@
+{
+  "id": "uboot.samplehud",
+  "name": "Sample HUD",
+  "version": "0.1.0",
+  "author": "modkit",
+  "entry": "SampleHud.SamplePlugin",
+  "assembly": "SampleHud.dll",
+  "gameVersion": ">=2026.08.28",
+  "dependsOn": [],
+  "network": "client-only",
+  "loadOrder": 100
+}

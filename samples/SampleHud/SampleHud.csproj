@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>SampleHud</AssemblyName>
+    <RootNamespace>SampleHud</RootNamespace>
+    <LangVersion>10</LangVersion>
+    <Nullable>disable</Nullable>
+    <NoWarn>CS0436;CS0618</NoWarn>
+    <GameDir Condition="'$(GameDir)' == ''">$(WOLFPACK_DIR)</GameDir>
+    <GameDir Condition="'$(GameDir)' == ''">D:\Program Files (x86)\steam\steamapps\common\Wolfpack</GameDir>
+    <InteropDir>$(GameDir)\BepInEx\interop</InteropDir>
+    <KitDir>$(MSBuildThisFileDirectory)..\..\src\UbootLib</KitDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(KitDir)\UbootLib.csproj">
+      <Private>false</Private>
+    </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BepInEx.Core"><HintPath>$(GameDir)\BepInEx\core\BepInEx.Core.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppInterop.Runtime"><HintPath>$(GameDir)\BepInEx\core\Il2CppInterop.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppInterop.Common"><HintPath>$(GameDir)\BepInEx\core\Il2CppInterop.Common.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2Cppmscorlib"><HintPath>$(InteropDir)\Il2Cppmscorlib.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppSystem"><HintPath>$(InteropDir)\Il2CppSystem.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(InteropDir)\UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(InteropDir)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.IMGUIModule"><HintPath>$(InteropDir)\UnityEngine.IMGUIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.InputLegacyModule"><HintPath>$(InteropDir)\UnityEngine.InputLegacyModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.ImageConversionModule"><HintPath>$(InteropDir)\UnityEngine.ImageConversionModule.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+</Project>
